@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "aemo_automate"
+name = "aemo_gen_types"
 version = "0.1.0"
 dependencies = [
  "html_parser",
