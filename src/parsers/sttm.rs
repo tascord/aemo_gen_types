@@ -214,16 +214,6 @@ fn parse_records_html(dom: Dom, dictionary: Vec<DictionaryField>) -> Vec<(String
             }
         });
 
-    fs::write(
-        "./files/ir_records",
-        records
-            .iter()
-            .map(|a| String::from(a.clone().0 + ":\n" + &a.1.join("\n")))
-            .collect::<Vec<String>>()
-            .join("\n---\n"),
-    )
-    .expect("Unable to write records to disk");
-
     records
 }
 

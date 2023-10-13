@@ -17,12 +17,6 @@ fn main() {
     let dictionary = patch_sttm_dict(sttm::load_dictionary("./files/dictionary.json"));
     println!("Loaded Data Dictionary");
 
-    std::fs::write(
-        "./files/ir_patched_dict",
-        serde_json::to_string_pretty(&dictionary).unwrap(),
-    )
-    .unwrap();
-
     // Generate records
     let records = sttm::get_records(html, dictionary);
     println!("Generated records");
