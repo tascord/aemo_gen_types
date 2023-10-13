@@ -1,6 +1,6 @@
 use std::sync::Mutex;
 
-use aemo_automate::{create_html, DictionaryField};
+use aemo_gen_types::{create_html, DictionaryField};
 use parsers::sttm;
 
 pub mod parsers;
@@ -77,7 +77,6 @@ fn patch_sttm_dict(dictionary: Vec<DictionaryField>) -> Vec<DictionaryField> {
     report_uses("trn", "INT705v2");
     report_uses("trn", "INT705v3");
     report_uses("trn_priority", "INT706v2");
-    report_uses("gas_date", "INT653v3");
 
     // Dedupe missing v2 reports
     missing_dupe("INT718", 2);

@@ -1,6 +1,6 @@
 use std::fs;
 
-use aemo_automate::{
+use aemo_gen_types::{
     get_child_by_tag, inner_text, remove_lists, setup_dom, DictionaryField, Record, RecordField,
 };
 use html_parser::Dom;
